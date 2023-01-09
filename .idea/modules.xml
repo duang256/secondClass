@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/common_config/common_config.iml" filepath="$PROJECT_DIR$/common_config/common_config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common_mapper/common_mapper.iml" filepath="$PROJECT_DIR$/common_mapper/common_mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common_redis/common_redis.iml" filepath="$PROJECT_DIR$/common_redis/common_redis.iml" />
+    </modules>
+  </component>
+</project>

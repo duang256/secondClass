@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.wit</groupId>
+    <artifactId>secondClassroom_parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <!--子模块-->
+    <modules>
+        <module>common_pojo</module>
+        <module>common_utils</module>
+        <module>common_eureka</module>
+        <module>common_redis</module>
+        <module>common_config</module>
+    </modules>
+
+
+    <!-- Spring Boot的父项目，声明所有Spring Boot相关版本 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.6.RELEASE</version>
+    </parent>
+
+    <properties>
+        <fastdfs-version>1.27</fastdfs-version>
+        <common-lang3-version>3.4</common-lang3-version>
+        <mybatis-version>3.5.1</mybatis-version>
+        <mysql-connector-java-version>5.1.38</mysql-connector-java-version>
+        <druid-version>1.0.9</druid-version>
+        <pagehelper-version>1.2.10</pagehelper-version>
+        <logback-version>5.0</logback-version>
+        <spring-mybats-version>2.0.1</spring-mybats-version>
+    </properties>
+
+    <!-- 声明依赖，父项目中声明，子项目添加依赖时不需要有version，所有版本都由父项目进行统一管理 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- fastdfs -->
+            <dependency>
+                <groupId>cn.bestwu</groupId>
+                <artifactId>fastdfs-client-java</artifactId>
+                <version>${fastdfs-version}</version>
+            </dependency>
+            <!--序列化工具-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${common-lang3-version}</version>
+            </dependency>
+            <!--Spring Cloud Platform   支持config Gateway等-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Greenwich.SR2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- MyBatis -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis-version}</version>
+            </dependency>
+
+            <!-- MySql Driver  -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java-version}</version>
+            </dependency>
+
+            <!--druid连接池-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid-version}</version>
+            </dependency>
+
+            <!--PageHelper-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper-version}</version>
+            </dependency>
+
+            <!--MyBatis And Spring Integration Starter-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${spring-mybats-version}</version>
+            </dependency>
+
+            <!--Logback 日志-->
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${logback-version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>

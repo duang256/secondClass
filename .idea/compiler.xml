@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common_eureka" />
+        <module name="common_utils" />
+        <module name="common_config" />
+        <module name="common_pojo" />
+        <module name="common_mapper" />
+        <module name="common_redis" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common_config" target="1.8" />
+      <module name="common_mapper" target="1.8" />
+      <module name="common_redis" target="1.8" />
+      <module name="secondClassroom_api" target="1.8" />
+      <module name="secondClassroom_common" target="1.8" />
+      <module name="secondClassroom_pojo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common_config" options="-parameters" />
+      <module name="common_eureka" options="-parameters" />
+      <module name="common_mapper" options="-parameters" />
+      <module name="common_pojo" options="-parameters" />
+      <module name="common_redis" options="-parameters" />
+      <module name="common_utils" options="-parameters" />
+      <module name="secondClassroom_api" options="-parameters" />
+      <module name="secondClassroom_common" options="-parameters" />
+      <module name="secondClassroom_parent" options="-parameters" />
+      <module name="secondClassroom_pojo" options="-parameters" />
+    </option>
+  </component>
+</project>
